@@ -199,5 +199,25 @@ Which gave all files and directories with size larger than 150KB:
 ./technical/911report/chapter-13.5.txt
 ./technical/911report/chapter-3.txt
 ```
-
+and:
+```
+find ./technical -mtime -23 > find-results.txt
+cat find-results.txt
+```
+Which gave all files modified in the last 23 days:
+```
+...
+./technical/911report/chapter-12.txt
+./technical/911report/chapter-10.txt
+./technical/911report/chapter-11.txt
+```
+and:
+```
+find ./technical -mtime -22 > find-results.txt
+cat find-results.txt
+```
+Which gave all files modified in the last 22 days:
+```
+```
+Since the last day all the files were "modified" was when I cloned them onto my computer 23 days ago.
 
