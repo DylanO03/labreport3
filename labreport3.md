@@ -113,3 +113,91 @@ Files writable by others:
 ```
 	find /path/to/search -perm -o=w
 ```
+
+So I used:
+```
+find ./technical -name "final.txt" > find-results.txt
+cat find-results.txt
+```
+Which gave all files with the name "final.txt":
+```
+./technical/government/Env_Prot_Agen/final.txt
+```
+and:
+```
+find ./technical -name "commission_report.txt" > find-results.txt
+cat find-results.txt
+```
+Which gaveall files with the name "commission_report.txt":
+```
+./technical/government/About_LSC/commission_report.txt
+```
+and:
+```
+find ./technical -type f > find-results.txt
+cat find-results.txt
+```
+Which gave a very long list of all files in the technical directory:
+```
+...
+./technical/911report/chapter-12.txt
+./technical/911report/chapter-10.txt
+./technical/911report/chapter-11.txt
+```
+and:
+```
+find ./technical -type d > find-results.txt
+cat find-results.txt
+```
+Which gave a list of all directories in technical:
+```
+./technical
+./technical/government
+./technical/government/About_LSC
+./technical/government/Env_Prot_Agen
+./technical/government/Alcohol_Problems
+./technical/government/Gen_Account_Office
+./technical/government/Post_Rate_Comm
+./technical/government/Media
+./technical/plos
+./technical/biomed
+./technical/911report
+```
+and:
+```
+find ./technical -size -1k > find-results.txt
+cat find-results.txt
+```
+Which gave all files and directories with size less than 1KB:
+```
+./technical
+./technical/government
+./technical/government/About_LSC
+./technical/government/Env_Prot_Agen
+./technical/government/Alcohol_Problems
+./technical/government/Post_Rate_Comm
+./technical/plos/pmed.0020191.txt
+./technical/plos/pmed.0020226.txt
+./technical/911report
+```
+and:
+```
+find ./technical -size +150k > find-results.txt
+cat find-results.txt
+```
+Which gave all files and directories with size larger than 150KB:
+```
+./technical/government/About_LSC/commission_report.txt
+./technical/government/Env_Prot_Agen/multi102902.txt
+./technical/government/Env_Prot_Agen/bill.txt
+./technical/government/Env_Prot_Agen/tech_adden.txt
+./technical/government/Gen_Account_Office/GovernmentAuditingStandards_yb2002ed.txt
+./technical/government/Gen_Account_Office/Statements_Feb28-1997_volume.txt
+./technical/government/Gen_Account_Office/pe1019.txt
+./technical/government/Gen_Account_Office/d01591sp.txt
+./technical/911report/chapter-13.4.txt
+./technical/911report/chapter-13.5.txt
+./technical/911report/chapter-3.txt
+```
+
+
