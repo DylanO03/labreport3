@@ -24,4 +24,5 @@ public class ArrayTests2 {
 	}
 }
 ```
-The first test fails, while the second test doesn't.
+The first test fails, while the second test doesn't:
+![Symptom_Image](Symptom.png)
