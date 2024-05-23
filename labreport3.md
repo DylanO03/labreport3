@@ -25,7 +25,7 @@ public class ArrayTests2 {
 	}
 }
 ```
-The first test fails, while the second test doesn't:
+The first test fails, while the second test doesn't:  
 ![Symptom_Image](Symptom.png)
 
 And given this the orginal code:
@@ -46,11 +46,11 @@ static void reverseInPlaceNew(int[] arr) {
     }
   }
 ```
-This now stops the previous code from creating a mirrored array, but instead a properly reversed one.
-Since the previous wrote over the first half with the second half, then reassigned the new first half back to the second half, which effectively mirrored the array, as opposed to reversing it. Whereas the new method only iterates halfway through the array, and properly swaps each of the first half of the elements with those in the last half, which effectively reverses the array.
+This now stops the previous code from creating a mirrored array, but instead a properly reversed one.  
+Since the previous wrote over the first half with the second half, then reassigned the new first half back to the second half, which   effectively mirrored the array, as opposed to reversing it. Whereas the new method only iterates halfway through the array, and properly swaps each of the first half of the elements with those in the last half, which effectively reverses the array.  
 
 # Part 2
-After give ChatGPT the prompt: "what are all the ways to use find"
+After give ChatGPT the prompt: "what are all the ways to use find"  
 It gave me: "The find command in Unix/Linux is a powerful tool used to search for files and directories within a directory hierarchy. It provides many options and arguments to customize and refine the search criteria. Here are some common and advanced ways to use the find command:
 
 Basic Usage
