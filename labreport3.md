@@ -46,3 +46,4 @@ static void reverseInPlaceNew(int[] arr) {
   }
 ```
 This now stops the previous code from creating a mirrored array, but instead a properly reversed one.
+Since the previous wrote over the first half with the second half, then reassigned the new first half back to the second half, which effectively mirrored the array, as opposed to reversing it.
